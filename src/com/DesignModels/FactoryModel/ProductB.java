@@ -6,5 +6,6 @@ public class ProductB implements Product{
     public void getProduct(String msg) {
         if(msg.equals("B"))
             System.out.println("execute "+ msg);
+        else System.out.println("error product "+msg);
     }
 }
