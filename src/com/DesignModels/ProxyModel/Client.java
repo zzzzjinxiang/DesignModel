@@ -9,5 +9,8 @@ public class Client{
         AbstractSubject proxy = (AbstractSubject) Proxy.newProxyInstance(ClassLoader.getSystemClassLoader()
                 ,new Class[]{AbstractSubject.class},subjectHandler);
         proxy.doSomething();
+        System.out.println();
+        AbstractSubject subject = new ProxySubject(realSubject);
+        subject.doSomething();
     }
 }

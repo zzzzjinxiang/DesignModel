@@ -12,10 +12,9 @@ public class ProxySubject implements AbstractSubject {
 
     @Override
     public void doSomething() {
+        System.out.println("identity id");
         real.doSomething();
+        System.out.println("Access identify");
     }
 
-    public void doOtherthing(){
-
-    }
 }
