@@ -10,6 +10,7 @@ public class test {
         monitor.put(user2);
         monitor.put(user3);
         monitor.delete(user2);
+        monitor.send("userA out of date");
         monitor.get();
     }
 }

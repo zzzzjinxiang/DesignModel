@@ -8,18 +8,19 @@ import java.util.List;
 public class monitorSubject implements Subject{
 
     private List<Observer> observers = new LinkedList<>();
+    String msg;
 
     @Override
     public void put(Observer observer) {
         observers.add(observer);
-        notifyObservers("new add user" + observer.toString());
+        notifyNewUser("new custom join",observer);
     }
 
     @Override
     public void delete(Observer observer) {
         if(!observers.isEmpty()) {
             observers.remove(observer);
-            notifyObservers("user leave");
+            notifyNewUser("user leaves",observer);
         }
         else System.out.println("no submit user");
     }
@@ -27,13 +28,24 @@ public class monitorSubject implements Subject{
     @Override
     public void get() {
         observers.get(0);
-        notifyObservers("extract newest user");
+        notifyNewUser("extract newest user",observers.get(0));
+    }
+
+    public void notifyNewUser(String msg,Observer observer){
+        observer.update(msg);
+    }
+
+    public void send(String s){
+        this.msg = s;
+        System.out.println("users update:" + s);
+        notifyObservers(s);
     }
 
     @Override
     public void notifyObservers(String msg) {
-        for(int i =0;i<observers.size();i++){
-            observers.get(i).update("new Operation has been executed -> "+msg);
+        for(Observer observer : observers){
+            observer.update(msg);
         }
+
     }
 }
