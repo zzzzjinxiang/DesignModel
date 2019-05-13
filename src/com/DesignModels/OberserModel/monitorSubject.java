@@ -20,15 +20,15 @@ public class monitorSubject implements Subject{
     public void delete(Observer observer) {
         if(!observers.isEmpty()) {
             observers.remove(observer);
-            notifyNewUser("user leaves",observer);
+            notifyNewUser("JpaUse leaves",observer);
         }
-        else System.out.println("no submit user");
+        else System.out.println("no submit JpaUse");
     }
 
     @Override
     public void get() {
         observers.get(0);
-        notifyNewUser("extract newest user",observers.get(0));
+        notifyNewUser("extract newest JpaUse",observers.get(0));
     }
 
     public void notifyNewUser(String msg,Observer observer){
