@@ -20,17 +20,6 @@ public class Main {
             System.out.println(list.hashCode());
         }
 
-        /**write your code here
-         *@see 状态模式测试demo
-         *@show 状态转移
-        Integer state=0;
-        Context context =new Context();
-        OrderState newO = new OrderState();
-        state = context.setState(newO,state);
-        context.judgeState(state);
-        state = context.setState(new FreeState(),state);
-        state = context.setState(new SettleState(),state);
-        */
 
         
     }

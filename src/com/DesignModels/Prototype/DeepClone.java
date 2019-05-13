@@ -5,6 +5,20 @@ import java.io.*;
 public class DeepClone implements Cloneable, Serializable {
     private static final long serialVersionUID = 1L;
     private String name;
+    private ProductA productA;
+
+    public DeepClone(String name,ProductA productA){
+        this.productA = productA;
+        this.name = name;
+    }
+
+    public void updateName(String name){
+        this.name = name;
+    }
+
+    public String getName(){
+        return name;
+    }
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
