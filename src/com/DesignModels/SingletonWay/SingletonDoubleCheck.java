@@ -1,15 +1,16 @@
 package com.DesignModels.SingletonWay;
 
 public class SingletonDoubleCheck {
-    private static volatile SingletonDoubleCheck singletonDoubleCheck;
+    private static SingletonDoubleCheck instance = null;
     private SingletonDoubleCheck(){}
     public static SingletonDoubleCheck getInstance(){
-        if (singletonDoubleCheck==null){
-            synchronized (SingletonDoubleCheck.class){
-                if (singletonDoubleCheck==null)
-                    singletonDoubleCheck = new SingletonDoubleCheck();
+        if(instance==null){
+            synchronized (SingletonDoubleCheck.class) {
+                if (instance == null) {
+                    instance = new SingletonDoubleCheck();
+                }
             }
         }
-        return singletonDoubleCheck;
+        return instance;
     }
 }
