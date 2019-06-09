@@ -1,4 +1,4 @@
-package com.DesignModels.AdapterSimple;
+package com.DesignModels.AdapterModels.AdapterClass;
 
 public class Source {
 

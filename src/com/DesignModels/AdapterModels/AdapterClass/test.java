@@ -1,4 +1,7 @@
-package com.DesignModels.AdapterSimple;
+package com.DesignModels.AdapterModels.AdapterClass;
+
+import com.DesignModels.AdapterModels.AdapterClass.Adapter;
+import com.DesignModels.AdapterModels.AdapterClass.Targetable;
 
 public class test {
     public static void main(String[] args){
