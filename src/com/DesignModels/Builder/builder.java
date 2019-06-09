@@ -10,13 +10,21 @@ import java.util.List;
 public class builder {
     private int numA;
     private int numB;
+
     public builder(int numA,int numB){
         this.numA = numA;
         this.numB = numB;
     }
+
+    public builder(){}
+
     public List<Product> buildA(){
         List<Product> list = new ArrayList<>();
-        for(int i=0;i<numA;i++){
+        int defalut = 10;
+        if(numA!=0){
+            defalut = numA;
+        }
+        for(int i=0;i<defalut;i++){
             list.add(new ProductA());
         }
         return list;
@@ -24,7 +32,11 @@ public class builder {
 
     public List<Product> buildB(){
         List<Product> list = new ArrayList<>();
-        for(int i = 0;i<numB;i++) {
+        int defalut = 10;
+        if(numB!=0){
+            defalut = numB;
+        }
+        for(int i = 0;i<defalut;i++) {
             list.add(new ProductB());
         }
         return list;
