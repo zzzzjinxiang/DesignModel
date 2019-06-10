@@ -10,7 +10,7 @@ public class test {
         List<Product> listA = builder.buildA();
         List<Product> listB = builder.buildB();
         for(Product p:listA){
-            p.getProduct("this is A");
+            p.getProduct("this is AdapterModels");
         }
         for(Product p:listB){
             p.getProduct("this is B");
