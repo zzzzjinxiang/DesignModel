@@ -7,13 +7,13 @@ public class test {
         BridgeDriverManage bridgeDriverManage = new Client();
 
         /*调用第一个对象*/
-        Driver driver1 = new MysqlSub();
-        bridgeDriverManage.setDriver(driver1);
+        Driver mysqlDriver = new MysqlSub();
+        bridgeDriverManage.setDriver(mysqlDriver);
         bridgeDriverManage.use();
 
         /*调用第二个对象*/
-        Driver driver2 = new OracleSub();
-        bridgeDriverManage.setDriver(driver2);
+        Driver oracleDriver = new OracleSub();
+        bridgeDriverManage.setDriver(oracleDriver);
         bridgeDriverManage.use();
     }
 }
