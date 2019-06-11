@@ -6,6 +6,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class ConnectionPool {
+    /**
+     * 对于有共同属性的实例，只需创建一次即可实现多次使用
+     */
 
     private ArrayList<Connection> pool;
 
